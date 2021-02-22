@@ -20,7 +20,7 @@ public class ClientService {
 	public Page<ClientDTO> findAllPaged(PageRequest pageRequest){
 		
 		Page<Client> list = repository.findAll(pageRequest);
-		
+			
 		return list.map(x -> new ClientDTO( x ));
 		
 	}
