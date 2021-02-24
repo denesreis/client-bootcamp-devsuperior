@@ -31,9 +31,9 @@ public class ClientService {
 		
 		Optional<Client> obj = repository.findById(id);
 		
-		//Client entity = obj.orElseThrow(() -> new ResourceNotFoundException("Cliente não localizado"));
+		Client entity =obj.orElseThrow(() -> new ResourceNotFoundException("Cliente não localizado"));
 		
-		Client entity = obj.get();
+		//Client entity = obj.get();
 		
 		return new ClientDTO(entity);
 		
